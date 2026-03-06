@@ -1,36 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>FraudShield Login</title>
+<title>FraudShield Dashboard</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="login-body">
+<body>
 
-<div class="login-box">
+<h1>FraudShield Dashboard</h1>
 
-<h1>FraudShield AI</h1>
+<p>Welcome to the AI Fraud Detection System</p>
 
-<input id="user" placeholder="Username">
-<input id="pass" type="password" placeholder="Password">
-
-<button onclick="login()">Login</button>
-
+<div>
+<h3>Total Transactions</h3>
+<p>2847</p>
 </div>
 
-<script>
-function login(){
-let u=document.getElementById("user").value
-let p=document.getElementById("pass").value
+<div>
+<h3>Fraud Detected</h3>
+<p style="color:red;">47</p>
+</div>
 
-if(u==="admin" && p==="admin"){
-window.location="dashboard.html"
-}
-else{
-alert("Invalid Login")
-}
-}
-</script>
+<div>
+<h3>Blocked Transactions</h3>
+<p style="color:orange;">38</p>
+</div>
 
 </body>
 </html>
