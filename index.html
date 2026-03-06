@@ -20,21 +20,22 @@
 <script>
 
 function login(){
+    event.preventDefault();
 
-let u = document.getElementById("user").value
-let p = document.getElementById("pass").value
+    let u = document.getElementById("user").value;
+    let p = document.getElementById("pass").value;
 
-if(u=="admin" && p=="admin"){
-window.location.href="dashboard.html"
-}
-else{
-alert("Invalid Login")
-}
-
+    if(u === "admin" && p === "admin"){
+        window.location.href = "dashboard.html";
+    } 
+    else{
+        alert("Invalid Login");
+    }
 }
 
 </script>
 
 </body>
 </html>
+
 
