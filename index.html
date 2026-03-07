@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FraudShield AI</title>
+<style>
+
+body{
+font-family: Arial;
+background:#071226;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.box{
+background:#0c1f3f;
+padding:40px;
+border-radius:10px;
+text-align:center;
+}
+
+input{
+padding:10px;
+margin:10px;
+width:200px;
+}
+
+button{
+padding:10px 20px;
+background:#2563eb;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+.dashboard{
+display:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box" id="login">
+
+<h1>FraudShield AI</h1>
+
+<input id="user" placeholder="Username">
+<br>
+<input id="pass" type="password" placeholder="Password">
+<br>
+<button onclick="login()">Login</button>
+
+</div>
+
+
+<div class="box dashboard" id="dash">
+
+<h1>FraudShield Dashboard</h1>
+
+<p>Total Transactions: 2847</p>
+<p style="color:red">Fraud Detected: 47</p>
+<p style="color:orange">Blocked Transactions: 38</p>
+
+</div>
+
+
+<script>
+
+function login(){
+
+let u=document.getElementById("user").value
+let p=document.getElementById("pass").value
+
+if(u==="admin" && p==="admin"){
+document.getElementById("login").style.display="none"
+document.getElementById("dash").style.display="block"
+}
+else{
+alert("Invalid Login")
+}
+
+}
+
+</script>
+
+</body>
+</html>
